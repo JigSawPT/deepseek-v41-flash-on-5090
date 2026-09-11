@@ -17,7 +17,7 @@ written for it — the first thing that ran, and the numerical reference for eve
   the checkpoint declares (99 092), and the primes sum to the row counts of both tables.
 - **The engram tables live on disk, not in RAM or VRAM.** Same command before and after the
   conversion with the tables: resident memory unchanged, the loader maps the tensors
-  (`TENSOR_HOST`) and the host gathers 56 rows per token.
+  (`TENSOR_HOST`) and the host gathers 48 rows per token.
 - **The engram is on and pulls in the right direction.** A test compares the port's layer-1 state
   with the table zeroed and with the table live against the reference: live is closer.
 - **The model loads and runs.** 1 012 tensors, 467.3 GiB of weights plus the tables, `--moe-stream`,

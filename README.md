@@ -225,7 +225,7 @@ its value comes almost entirely from tokens accepted per step, not from cheap ve
 ### The one place where look-ahead works without a predictor
 
 The engram addresses are computed from token ids, not from the hidden state — they are known the
-instant the token exists. The input routine read 56 rows per token, one at a time, on the thread
+instant the token exists. The input routine read 48 rows per token, one at a time, on the thread
 the graph was waiting for. Two passes — the first only hashes and cannot miss; between the two, the
 whole list goes to the OS through `PrefetchVirtualMemory` — and:
 
