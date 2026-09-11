@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this report, its tools or its results, please cite it as below."
+title: "DeepSeek-V4.1-Flash on One RTX 5090: a llama.cpp port, its numbers, and what limits it"
+type: software
+authors:
+  - name: "JC-OM (JigSawPT)"
+date-released: 2026-09-11
+version: "1.0"
+license: MIT
+repository-code: "https://github.com/JigSawPT/deepseek-v41-flash-on-5090"
+url: "https://github.com/JigSawPT/deepseek-v41-flash-on-5090"
+keywords:
+  - DeepSeek-V4.1-Flash
+  - llama.cpp
+  - mixture-of-experts
+  - expert streaming
+  - speculative decoding
+  - GGUF
+abstract: >-
+  Technical report on porting DeepSeek-V4.1-Flash (552B mixture-of-experts, 189 GiB n-gram
+  memory) to a llama.cpp fork and running it on a single RTX 5090 (31.8 GiB of VRAM) with
+  125.7 GiB of RAM, with the routed experts streaming from NVMe: correctness against the
+  reference implementation at its own fp8 rounding floor, 5.1 tokens/s on new content and
+  21 tokens/s on resident content, a measured decomposition of the token into compute, PCIe
+  and NVMe, the ceilings that follow, and the negative results (prefetch oracle, block
+  verification, n-gram and DSpark drafts, encoder-only prefill). Includes the measurement
+  tools and the raw results.

@@ -22,7 +22,8 @@ in 11 shards) and
 [DeepSeek-V4.1-Flash-DSpark-GGUF](https://huggingface.co/JigSawPT/DeepSeek-V4.1-Flash-DSpark-GGUF)
 (draft head, 8 GB). Every number on this page names the tool that produced it; the tools are in
 [`tools/`](tools/) and the raw results in [`results/`](results/). Units: memory capacities in GiB,
-file sizes in GB, as the tools report them.
+file sizes in GB, as the tools report them. Discussion thread:
+[ggml-org/llama.cpp#28766](https://github.com/ggml-org/llama.cpp/discussions/28766).
 
 ## Contents
 
