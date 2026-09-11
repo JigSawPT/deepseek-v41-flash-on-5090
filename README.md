@@ -20,7 +20,7 @@ that the measurements overturned.
 |---|---|---|---|
 
 Code: the [`dsv41-porte` branch](https://github.com/JigSawPT/llama.cpp/tree/dsv41-porte) of llama.cpp
-(31 commits on top of b10269, +2 161 lines across the port). Models:
+(31 commits on top of b10269 at tag `dsv41-v1`, +2 161 lines across the port). Models:
 [DeepSeek-V4.1-Flash-GGUF](https://huggingface.co/JigSawPT/DeepSeek-V4.1-Flash-GGUF) (target, 502 GB
 in 11 shards) and
 [DeepSeek-V4.1-Flash-DSpark-GGUF](https://huggingface.co/JigSawPT/DeepSeek-V4.1-Flash-DSpark-GGUF)
