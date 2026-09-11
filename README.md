@@ -3,7 +3,7 @@
 *Technical report, 10–11 September 2026.*
 
 Porting a 552B-parameter mixture-of-experts model (40 layers, 384 experts, a 189 GiB n-gram
-memory) to a llama.cpp fork and running it on a single RTX 5090 with 32 GB of VRAM and 125.7 GiB
+memory) to a llama.cpp fork and running it on a single RTX 5090 with 31.8 GiB of VRAM (a 32 GB card) and 125.7 GiB
 of RAM. What is proven, what is measured, what remains — including the estimates made along the way
 that the measurements overturned.
 
@@ -21,7 +21,8 @@ Code: the [`dsv41-porte` branch](https://github.com/JigSawPT/llama.cpp/tree/dsv4
 in 11 shards) and
 [DeepSeek-V4.1-Flash-DSpark-GGUF](https://huggingface.co/JigSawPT/DeepSeek-V4.1-Flash-DSpark-GGUF)
 (draft head, 8 GB). Every number on this page names the tool that produced it; the tools are in
-[`tools/`](tools/) and the raw results in [`results/`](results/).
+[`tools/`](tools/) and the raw results in [`results/`](results/). Units: memory capacities in GiB
+(the card's 32 GB is 31.8 GiB usable), file sizes in GB, as the tools report them.
 
 ## Contents
 
@@ -37,7 +38,7 @@ in 11 shards) and
 ## How the model runs here
 
 The weights do not fit in the machine: 269 GiB of routed experts, 189 GiB of engram tables, a few
-GiB of everything else, against 32 GB of VRAM and 125.7 GiB of RAM. Three things make it run:
+GiB of everything else, against 31.8 GiB of VRAM and 125.7 GiB of RAM. Three things make it run:
 
 - **Expert streaming.** The fork's `--moe-stream` path keeps a cache of expert weights in VRAM
   (18 GiB here) and a second, larger tier in pinned RAM (72 GiB here, the *host tier*, `--moe-stream-l2`),
@@ -160,7 +161,7 @@ invariant (62.74 %) across the sweep, which is what makes the decomposition legi
 | today, host tier of 72 GiB | 4.3 | the host-tier sweep |
 | perfect look-ahead of 5 tokens | **5.6** | the prefetch oracle, measured (next section) |
 | no disk misses at all | 6.2 | decomposition; the oracle gets within 2 % of it |
-| everything resident in VRAM | 21.3 | unreachable: a 105 GiB working set against a 32 GB card |
+| everything resident in VRAM | 21.3 | unreachable: a 105 GiB working set against 31.8 GiB of VRAM |
 
 > **Earlier estimate:** "with an efficient I/O path this reaches 20 tokens/s."
 > **Measured:** the real ceiling of this architecture on this machine is 6.2 tokens/s. The 21.3
@@ -279,7 +280,7 @@ almost linearly at small K. At the trained block of 5, a step that accepts 5.67 
 covers the cost, so each prompt lands within ±14 % of the control according to its own acceptance,
 and the benchmark's median is −4 %. The mechanism is not at fault: in a compute-bound regime, where
 a batched verification is nearly free, the same acceptance would multiply throughput. That regime
-needs the working set on the card, which this model does not allow on 32 GB. The export stays; the
+needs the working set on the card, which this model does not allow on 31.8 GiB. The export stays; the
 default configuration does not use it.
 
 The same measurement exposed a real gap in the fork: the recurrent-state rollback of the V4 cache
