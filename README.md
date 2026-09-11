@@ -3,7 +3,7 @@
 *Technical report, 10–11 September 2026.*
 
 Porting a 552B-parameter mixture-of-experts model (40 layers, 384 experts, a 189 GiB n-gram
-memory) to a llama.cpp fork and running it on a single RTX 5090 with 31.8 GiB of VRAM (a 32 GB card) and 125.7 GiB
+memory) to a llama.cpp fork and running it on a single RTX 5090 with 31.8 GiB of VRAM and 125.7 GiB
 of RAM. What is proven, what is measured, what remains — including the estimates made along the way
 that the measurements overturned.
 
@@ -21,8 +21,8 @@ Code: the [`dsv41-porte` branch](https://github.com/JigSawPT/llama.cpp/tree/dsv4
 in 11 shards) and
 [DeepSeek-V4.1-Flash-DSpark-GGUF](https://huggingface.co/JigSawPT/DeepSeek-V4.1-Flash-DSpark-GGUF)
 (draft head, 8 GB). Every number on this page names the tool that produced it; the tools are in
-[`tools/`](tools/) and the raw results in [`results/`](results/). Units: memory capacities in GiB
-(the card's 32 GB is 31.8 GiB usable), file sizes in GB, as the tools report them.
+[`tools/`](tools/) and the raw results in [`results/`](results/). Units: memory capacities in GiB,
+file sizes in GB, as the tools report them.
 
 ## Contents
 
