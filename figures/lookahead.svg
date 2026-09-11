@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 260" width="640" height="260" role="img" aria-label="Throughput in tokens per second against look-ahead in remap calls; the baseline is 4.3, the no-disk ceiling 6.2">
+  <style>text{font-family:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;font-size:11px;fill:#4A5158}</style>
+  <rect x="0" y="0" width="640" height="260" fill="#F6F7F5"/>
+  <line x1="60" y1="220" x2="620" y2="220" stroke="#C9D1CF" stroke-width="1"/>
+  <line x1="60" y1="30" x2="60" y2="220" stroke="#C9D1CF" stroke-width="1"/>
+  <g stroke="#C9D1CF" stroke-width="1" stroke-dasharray="2 3">
+    <line x1="60" y1="165.7" x2="620" y2="165.7"/><line x1="60" y1="111.4" x2="620" y2="111.4"/><line x1="60" y1="57.1" x2="620" y2="57.1"/>
+  </g>
+  <text x="52" y="224" text-anchor="end">3.0</text>
+  <text x="52" y="169" text-anchor="end">4.0</text>
+  <text x="52" y="115" text-anchor="end">5.0</text>
+  <text x="52" y="61" text-anchor="end">6.0</text>
+  <line x1="60" y1="149.4" x2="620" y2="149.4" stroke="#7A838A" stroke-width="1" stroke-dasharray="3 3"/>
+  <text x="616" y="145" text-anchor="end">baseline 4.3</text>
+  <line x1="60" y1="46.3" x2="620" y2="46.3" stroke="#B8451E" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="616" y="42" text-anchor="end" fill="#B8451E">no disk at all 6.2</text>
+  <polyline fill="none" stroke="#0B6E7A" stroke-width="2" points="90,149.4 156,198.3 222,171.1 288,187.4 354,182 420,125 486,87 552,78.9 618,84.3"/>
+  <g fill="#0B6E7A">
+    <circle cx="90" cy="149.4" r="3.5"/><circle cx="156" cy="198.3" r="3.5"/><circle cx="222" cy="171.1" r="3.5"/><circle cx="288" cy="187.4" r="3.5"/><circle cx="354" cy="182" r="3.5"/><circle cx="420" cy="125" r="3.5"/><circle cx="486" cy="87" r="3.5"/><circle cx="552" cy="78.9" r="4.5"/><circle cx="618" cy="84.3" r="3.5"/>
+  </g>
+  <g text-anchor="middle">
+    <text x="90" y="238">0</text><text x="156" y="238">1</text><text x="222" y="238">2</text><text x="288" y="238">4</text><text x="354" y="238">12</text><text x="420" y="238">40</text><text x="486" y="238">120</text><text x="552" y="238">200</text><text x="618" y="238">320</text>
+  </g>
+  <text x="340" y="255" text-anchor="middle" fill="#7A838A">look-ahead, in remap calls (40 = one token)</text>
+  <text x="156" y="212" text-anchor="middle" fill="#B8451E">3.5</text>
+  <text x="552" y="70" text-anchor="middle" fill="#0B6E7A" font-weight="500">5.6</text>
+</svg>

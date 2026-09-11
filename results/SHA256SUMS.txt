@@ -1,0 +1,12 @@
+df78cc60dd7eda3df3fe15f7c132fda4a9a05272da607c1e295b230490b74406 *split/DeepSeek-V4.1-Flash-MXFP4-engram-00001-of-00011.gguf
+5535dfcba769427ed3135cddc138b3bfc708905f5b36989ce39ad907ae64fe4c *split/DeepSeek-V4.1-Flash-MXFP4-engram-00002-of-00011.gguf
+6912ba102420df60d2fc07b9535465ea6e0e76340d252ce8bf91bc8665e43be3 *split/DeepSeek-V4.1-Flash-MXFP4-engram-00003-of-00011.gguf
+98859df6a625df01c5b2633789d2fea6af5e15708567aecc6f1851f640b48a86 *split/DeepSeek-V4.1-Flash-MXFP4-engram-00004-of-00011.gguf
+421ec5f0e9bbe4cb2654a0e3a98c715741f5b9a5d2785cb804a7723fa21b8060 *split/DeepSeek-V4.1-Flash-MXFP4-engram-00005-of-00011.gguf
+56e8787c3d1b53cedca834d1d7ac658eb7827ca8094e3572d67ac17f63abe910 *split/DeepSeek-V4.1-Flash-MXFP4-engram-00006-of-00011.gguf
+7005244646b4a5a8841324e4f3d1acb378e78ec1b049a1159ac9bf8f25fec26b *split/DeepSeek-V4.1-Flash-MXFP4-engram-00007-of-00011.gguf
+f26c8837caeea84d0f42f524d60635cb769a722e9208d7c406599e9a2efe8d11 *split/DeepSeek-V4.1-Flash-MXFP4-engram-00008-of-00011.gguf
+8b0bae1f021c5cf1e5ae9e31e3b6e4cd129d7ab4536097976eb2d9d2e7e6f38e *split/DeepSeek-V4.1-Flash-MXFP4-engram-00009-of-00011.gguf
+91226cec1353a80456b2c4bdb03673d4965132da4903bee1c787025f0d81918f *split/DeepSeek-V4.1-Flash-MXFP4-engram-00010-of-00011.gguf
+c3caf8812bee77cf6292e38c78620318917b587cf43a16c9e236a3ed8611994d *split/DeepSeek-V4.1-Flash-MXFP4-engram-00011-of-00011.gguf
+9438de8accbc27d7a2e089ace18bb515cb5cfdee491c21ff3d17f36d9c0a7648 *DeepSeek-V4.1-Flash-DSpark.gguf

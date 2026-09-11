@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 150" width="640" height="150" role="img" aria-label="Stall decomposition per remap call at L2 = 72 GiB: compute 20 %, PCIe 26 %, NVMe 54 %">
+  <style>text{font-family:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;font-size:11px;fill:#4A5158}</style>
+  <rect x="0" y="0" width="640" height="150" fill="#F6F7F5"/>
+  <text x="0" y="14">stall per remap call, L2 = 72 GiB — 5.46 ms measured</text>
+  <rect x="0" y="28" width="112" height="36" fill="#7A838A"/>
+  <rect x="112" y="28" width="146" height="36" fill="#0B6E7A" opacity=".55"/>
+  <rect x="258" y="28" width="302" height="36" fill="#0B6E7A"/>
+  <text x="6" y="51" fill="#F6F7F5" font-weight="500">compute 20 %</text>
+  <text x="118" y="51" fill="#F6F7F5" font-weight="500">PCIe 26 %</text>
+  <text x="264" y="51" fill="#F6F7F5" font-weight="500">NVMe 54 %</text>
+  <text x="0" y="86">1.175 ms · the ruler's resident case, not a fitted value</text>
+  <text x="0" y="104">1.537 ms · 2.40 misses × 53.6 % served from RAM × 1.19 ms</text>
+  <text x="0" y="122">3.164 ms · 2.40 misses × 46.4 % from disk × 2.85 ms</text>
+  <text x="0" y="142" fill="#7A838A">sum 5.876 against 5.458 measured — 7.7 % error; the three delta estimates spread between 1.20 and 1.98 ms</text>
+</svg>

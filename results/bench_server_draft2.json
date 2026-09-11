@@ -1,0 +1,118 @@
+{
+  "model": "DeepSeek-V4.1-Flash-MXFP4-engram.gguf",
+  "l2_gib": 72,
+  "cache_gib": 18,
+  "pin": 0,
+  "mode": "chat",
+  "n_new": 64,
+  "rounds": 3,
+  "temp": 0.0,
+  "ctx": 8192,
+  "extra": "-md C:/BenchmarkAI/models/GGUF/DeepSeek-V4.1-Flash/DeepSeek-V4.1-Flash-DSpark.gguf --spec-type draft-dspark --spec-draft-n-max 2 -ngld 99 --spec-draft-n-cpu-moe 3",
+  "load_start": "[{\"ProcessName\":\"claude\",\"RAM_GB\":0.1,\"CPU_s\":156},{\"ProcessName\":\"claude\",\"RAM_GB\":0,\"CPU_s\":72},{\"ProcessName\":\"claude\",\"RAM_GB\":0.2,\"CPU_s\":122}]",
+  "command": "C:\\BenchmarkAI\\external\\llama.cpp-b10269\\build\\bin\\Release\\llama-server.exe -m C:\\BenchmarkAI\\models\\GGUF\\DeepSeek-V4.1-Flash\\DeepSeek-V4.1-Flash-MXFP4-engram.gguf -ngl 99 -c 8192 --moe-stream --moe-stream-cache 18 --moe-stream-l2 72 --host 127.0.0.1 --port 18411 --no-webui --reasoning off -md C:/BenchmarkAI/models/GGUF/DeepSeek-V4.1-Flash/DeepSeek-V4.1-Flash-DSpark.gguf --spec-type draft-dspark --spec-draft-n-max 2 -ngld 99 --spec-draft-n-cpu-moe 3",
+  "startup_s": 14.7,
+  "results": {
+    "short": {
+      "rounds": [
+        {
+          "ttft_s": 5.792,
+          "decode_s": 13.301,
+          "pieces": 64,
+          "tps": 4.74
+        },
+        {
+          "ttft_s": 0.317,
+          "decode_s": 2.937,
+          "pieces": 64,
+          "tps": 21.45
+        },
+        {
+          "ttft_s": 0.245,
+          "decode_s": 2.816,
+          "pieces": 64,
+          "tps": 22.38
+        }
+      ],
+      "tps_median": 21.45,
+      "tps_worst": 4.74,
+      "ttft_median": 0.32
+    },
+    "code": {
+      "rounds": [
+        {
+          "ttft_s": 6.779,
+          "decode_s": 12.417,
+          "pieces": 64,
+          "tps": 5.07
+        },
+        {
+          "ttft_s": 0.271,
+          "decode_s": 2.976,
+          "pieces": 64,
+          "tps": 21.17
+        },
+        {
+          "ttft_s": 0.245,
+          "decode_s": 2.853,
+          "pieces": 64,
+          "tps": 22.08
+        }
+      ],
+      "tps_median": 21.17,
+      "tps_worst": 5.07,
+      "ttft_median": 0.27
+    },
+    "prose_pt": {
+      "rounds": [
+        {
+          "ttft_s": 8.828,
+          "decode_s": 13.202,
+          "pieces": 64,
+          "tps": 4.77
+        },
+        {
+          "ttft_s": 0.323,
+          "decode_s": 3.264,
+          "pieces": 64,
+          "tps": 19.3
+        },
+        {
+          "ttft_s": 0.254,
+          "decode_s": 3.08,
+          "pieces": 64,
+          "tps": 20.46
+        }
+      ],
+      "tps_median": 19.3,
+      "tps_worst": 4.77,
+      "ttft_median": 0.32
+    },
+    "reasoning": {
+      "rounds": [
+        {
+          "ttft_s": 12.349,
+          "decode_s": 11.229,
+          "pieces": 64,
+          "tps": 5.61
+        },
+        {
+          "ttft_s": 0.328,
+          "decode_s": 3.045,
+          "pieces": 64,
+          "tps": 20.69
+        },
+        {
+          "ttft_s": 0.224,
+          "decode_s": 2.961,
+          "pieces": 64,
+          "tps": 21.28
+        }
+      ],
+      "tps_median": 20.69,
+      "tps_worst": 5.61,
+      "ttft_median": 0.33
+    }
+  },
+  "load_end": "[{\"ProcessName\":\"claude\",\"RAM_GB\":0.1,\"CPU_s\":156},{\"ProcessName\":\"claude\",\"RAM_GB\":0,\"CPU_s\":72},{\"ProcessName\":\"claude\",\"RAM_GB\":0.1,\"CPU_s\":124}]"
+}

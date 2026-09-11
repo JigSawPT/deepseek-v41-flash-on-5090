@@ -1,0 +1,62 @@
+{
+  "label": "draft",
+  "command": "C:\\BenchmarkAI\\external\\llama.cpp-b10269\\build\\bin\\Release\\llama-server.exe -m C:\\BenchmarkAI\\models\\GGUF\\DeepSeek-V4.1-Flash\\DeepSeek-V4.1-Flash-MXFP4-engram.gguf -ngl 99 -c 4096 --moe-stream --moe-stream-cache 13 --moe-stream-l2 72 --host 127.0.0.1 --port 18412 --no-webui --reasoning off -md C:\\BenchmarkAI\\models\\GGUF\\DeepSeek-V4.1-Flash\\DeepSeek-V4.1-Flash-DSpark.gguf --spec-type draft-dspark --spec-draft-n-max 2 -ngld 99 --spec-draft-n-cpu-moe 0",
+  "load_start": "[{\"ProcessName\":\"claude\",\"RAM_GB\":0.3,\"CPU_s\":153},{\"ProcessName\":\"claude\",\"RAM_GB\":0,\"CPU_s\":69},{\"ProcessName\":\"claude\",\"RAM_GB\":0.3,\"CPU_s\":118}]",
+  "cases": {
+    "verbatim": {
+      "cold": {
+        "tps": 4.663,
+        "generated": 51,
+        "ttft_s": 16.78,
+        "wall_s": 27.74,
+        "drafted": 34,
+        "accepted": 34,
+        "text": "A database index speeds up a query by letting the engine find rows without scanning the whole table. It does not help when the query touches most of the table, when the column has few distinct values, or when the index does not match the filter.",
+        "log_errors": 0
+      },
+      "resident": {
+        "tps": 7.258,
+        "generated": 51,
+        "ttft_s": 11.39,
+        "wall_s": 18.45,
+        "drafted": 34,
+        "accepted": 34,
+        "text": "A database index speeds up a query by letting the engine find rows without scanning the whole table. It does not help when the query touches most of the table, when the column has few distinct values, or when the index does not match the filter.",
+        "log_errors": 0
+      }
+    },
+    "code": {
+      "cold": {
+        "tps": 4.415,
+        "generated": 96,
+        "ttft_s": 8.8,
+        "wall_s": 30.57,
+        "drafted": 72,
+        "accepted": 59,
+        "text": "# Python Function: Print Numbers 1 to 20\n\n```python\ndef print_numbers():\n    \"\"\"Prints the numbers 1 to 20, one per line.\"\"\"\n    for i in range(1, 21):\n        print(i)\n\n# Call the function\nprint_numbers()\n```\n\n## How It Works\n\nThe function uses a `for` loop combined with Python's built-in `range()` function to iterate through the numbers. The call `range(1, ",
+        "log_errors": 0
+      },
+      "resident": {
+        "tps": 4.7,
+        "generated": 96,
+        "ttft_s": 7.13,
+        "wall_s": 27.57,
+        "drafted": 76,
+        "accepted": 56,
+        "text": "# Python Function: Print Numbers 1 to 20\n\n```python\ndef print_numbers():\n    for i in range(1, 21):\n        print(i)\n\nprint_numbers()\n```\n\n## How It Works\n\nThe function `print_numbers()` uses a `for` loop that iterates over the sequence produced by `range(1, 21)`. The `range()` function generates integers starting from the first argument (1) up to, but **not including**, the",
+        "log_errors": 0
+      }
+    }
+  },
+  "startup_s": 16.7,
+  "smoke": {
+    "tps": 2.027,
+    "generated": 7,
+    "ttft_s": 4.97,
+    "wall_s": 8.46,
+    "drafted": 6,
+    "accepted": 4,
+    "text": "One, two, three."
+  },
+  "load_end": "[{\"ProcessName\":\"claude\",\"RAM_GB\":0.3,\"CPU_s\":155},{\"ProcessName\":\"claude\",\"RAM_GB\":0,\"CPU_s\":72},{\"ProcessName\":\"claude\",\"RAM_GB\":0.3,\"CPU_s\":120}]"
+}
