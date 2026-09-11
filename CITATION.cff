@@ -6,6 +6,11 @@ authors:
   - name: "JC-OM (JigSawPT)"
 date-released: 2026-09-11
 version: "1.0"
+doi: 10.5281/zenodo.22711369
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.22711368
+    description: "Concept DOI, resolves to the latest version"
 license: MIT
 repository-code: "https://github.com/JigSawPT/deepseek-v41-flash-on-5090"
 url: "https://github.com/JigSawPT/deepseek-v41-flash-on-5090"

@@ -1,6 +1,10 @@
 # DeepSeek-V4.1-Flash on One RTX 5090
 
-*Technical report, 10–11 September 2026.*
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22711368.svg)](https://doi.org/10.5281/zenodo.22711368)
+
+*Technical report, 10–11 September 2026.* Cite as: JC-OM (JigSawPT), *DeepSeek-V4.1-Flash on One RTX
+5090: a llama.cpp port, its numbers, and what limits it*, v1.0, 2026, doi:10.5281/zenodo.22711369
+(see [`CITATION.cff`](CITATION.cff)).
 
 Porting a 552B-parameter mixture-of-experts model (40 layers, 384 experts, a 189 GiB n-gram
 memory) to a llama.cpp fork and running it on a single RTX 5090 with 31.8 GiB of VRAM and 125.7 GiB
