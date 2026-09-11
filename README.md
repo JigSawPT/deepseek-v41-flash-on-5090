@@ -319,7 +319,7 @@ verification step.
 | cache eviction policy | 0 % | LRU, LFU, heat, random and the optimal MIN/Belady policy give the same misses at 72 GiB (`tools/cache_oracle.py`) |
 | more RAM | does not help | the working set grows with the content (26 new experts per token in the tail; 105 GiB at 128 tokens) |
 | 2-bit experts, skipping layers | unnecessary | bytes are not the bottleneck; declining them costs no speed |
-| faster NVMe | unnecessary | 43 % of the available bandwidth is used |
+| faster NVMe | not tested | 43 % of the available bandwidth is used, so it is not expected to help |
 | encoder-only prefill | not exact | V4.1 is a causal encoder-decoder: its 20 encoder layers could in principle process the prompt alone, worth 23.9 % of prefill bytes; but the receptive field of the 19 sliding windows requires the decoder on the last 2 432 positions, below that the exact saving is zero, and the reference does not implement it |
 | DSpark draft head, draft of 2 | neutral | benchmark −4 % cold, 0 % resident; −14 to +8 % per prompt, tracking 51–79 % acceptance; +12–15 % only on verbatim repetition |
 
